@@ -74,10 +74,13 @@ class Weather extends React.Component {
           alert("Geolocation not available"); //if popup does not occur
         }
     
-        this.timerID = setInterval(
-          () => this.getWeather(this.state.lat, this.state.lon),
-          600000
-        );
+        this.timerID = setInterval( //pdate data at regular intervals in web applications, ensuring that the information remains current 
+          () => this.getWeather(this.state.lat, this.state.lon)
+          ,600000); //it calls every 10 min and fetches the data from api
+      }
+
+      componentWillUnmount() { //lifecycle methird called jsut before a compoent is removed from dom ,automatically called
+        clearInterval(this.timerID); //clears all the schedule , so taht our code restarts from start when teh app loads next time
       }
 
 }
