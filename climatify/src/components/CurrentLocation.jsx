@@ -56,22 +56,22 @@ class Weather extends React.Component {
 
     componentDidMount() { //react componentDidMount is automatically called by react after componet is added to dom
         if (navigator.geolocation) { //for browser to allow geolocation
-          this.getPosition()
+          this.getCurrentPosition()
             //If user allow location service then will fetch data & send it to get-weather function.
             .then((position) => {
                 //position is an object that gives some data and contains a latitude and longitude
                 console.log(position)
-              this.getWeather(position.coords.latitude, position.coords.longitude);
+                this.getWeather(position.coords.latitude, position.coords.longitude); //used to fetch data from a api givenS
             })
             .catch((err) => {
               //If user denied location service then standard location weather will le shown on basis of latitude & latitude.
               this.getWeather(28.67, 77.22);
               alert(
-                "You have disabled location service. Allow 'This APP' to access your location. Your current location will be used for calculating Real time weather."
+                "You have disabled location service. Your current location will be used for calculating Real time weather."
               );
             });
         } else {
-          alert("Geolocation not available");
+          alert("Geolocation not available"); //if popup does not occur
         }
     
         this.timerID = setInterval(
