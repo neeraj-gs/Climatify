@@ -1,5 +1,5 @@
 import apiKeys from "./apiKeys.js";
-
+import React from "react";
 
 const liveDate = (d)=>{ //specifies the current date
     //used to render data on the current location section
