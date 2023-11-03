@@ -56,7 +56,7 @@ class Weather extends React.Component {
 
     componentDidMount() { //react componentDidMount is automatically called by react after componet is added to dom
         if (navigator.geolocation) { //for browser to allow geolocation
-          this.getCurrentPosition()
+          this.getPosition()
             //If user allow location service then will fetch data & send it to get-weather function.
             .then((position) => {
                 //position is an object that gives some data and contains a latitude and longitude
@@ -82,5 +82,11 @@ class Weather extends React.Component {
       componentWillUnmount() { //lifecycle methird called jsut before a compoent is removed from dom ,automatically called
         clearInterval(this.timerID); //clears all the schedule , so taht our code restarts from start when teh app loads next time
       }
+
+      getPosition = (options) => { //options can be configs like accuracy requiremetns and timeout
+        return new Promise(function (resolve, reject) {
+          navigator.geolocation.getCurrentPosition(resolve, reject, options);
+        }); //we can also handle success and failure using then adn catch , but we can just taking using it to get the current locaiotn of teh user 
+      };
 
 }
