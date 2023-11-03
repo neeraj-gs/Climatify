@@ -1,11 +1,12 @@
 import './App.css'
+import Weather from './components/CurrentLocation'
 
 function App() {
 
   return (
     <>
       <div>
-        <CurrentLocation />
+        <Weather />
       </div>
     </>
   )

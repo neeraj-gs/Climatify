@@ -1,5 +1,5 @@
-import apiKeys from "./apiKeys.js";
 import React from "react";
+import { apiKeys } from "./apiKeys";
 
 const liveDate = (d)=>{ //specifies the current date
     //used to render data on the current location section
@@ -110,3 +110,5 @@ class Weather extends React.Component {
 
     }
 }
+
+export default Weather;
