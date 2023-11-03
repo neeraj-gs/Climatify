@@ -52,4 +52,32 @@ class Weather extends React.Component {
       sunset: undefined,
       errorMsg: undefined,
     };
+
+
+    componentDidMount() { //react componentDidMount is automatically called by react after componet is added to dom
+        if (navigator.geolocation) { //for browser to allow geolocation
+          this.getPosition()
+            //If user allow location service then will fetch data & send it to get-weather function.
+            .then((position) => {
+                //position is an object that gives some data and contains a latitude and longitude
+                console.log(position)
+              this.getWeather(position.coords.latitude, position.coords.longitude);
+            })
+            .catch((err) => {
+              //If user denied location service then standard location weather will le shown on basis of latitude & latitude.
+              this.getWeather(28.67, 77.22);
+              alert(
+                "You have disabled location service. Allow 'This APP' to access your location. Your current location will be used for calculating Real time weather."
+              );
+            });
+        } else {
+          alert("Geolocation not available");
+        }
+    
+        this.timerID = setInterval(
+          () => this.getWeather(this.state.lat, this.state.lon),
+          600000
+        );
+      }
+
 }
