@@ -1,4 +1,11 @@
-Climatify
+Climatify - A real time Live Weather FOrecasting App 
+
     Real time weather Forecast App 
     Based on Curernt location Location and also search feature
+    Live Weather FOrecast App
+    Open Werather API ,
+        Create a new API key and then user it
+        
+    Asks for Locations and detects teh locations and based on live location goves hte weather forecast 
 
+    geolocatoin is the livrary used to get the live location and make it
