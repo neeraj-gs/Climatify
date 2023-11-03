@@ -34,3 +34,22 @@ const liveDate = (d)=>{ //specifies the current date
     
       return `${day}, ${date} ${month} ${year}`;
 }
+
+class Weather extends React.Component {
+    //once we allow a location from our browser, it returns a object and we store it in the variables
+    state = {
+      latitude: undefined, //to get data of the current location
+      longitude: undefined,
+      errorMessage: undefined,
+      temperatureC: undefined,
+      temperatureF: undefined,
+      city: undefined,
+      country: undefined,
+      humidity: undefined,
+      description: undefined,
+      icon: "CLEAR_DAY",
+      sunrise: undefined,
+      sunset: undefined,
+      errorMsg: undefined,
+    };
+}
