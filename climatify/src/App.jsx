@@ -4,7 +4,9 @@ function App() {
 
   return (
     <>
-      <div>Weather App</div>
+      <div>
+        
+      </div>
     </>
   )
 }
