@@ -1,4 +1,4 @@
-
+import apiKeys from "./apiKeys.js";
 
 
 const liveDate = (d)=>{ //specifies the current date
@@ -87,6 +87,26 @@ class Weather extends React.Component {
         return new Promise(function (resolve, reject) {
           navigator.geolocation.getCurrentPosition(resolve, reject, options);
         }); //we can also handle success and failure using then adn catch , but we can just taking using it to get the current locaiotn of teh user 
+        //we get back data to getCurentpositon then we pass to above getPostion and tehn handles the case of resolve adn reject
       };
 
+
+
+      getWeather = async (lat, lon) => { //once we get the cordinates from position, we will get the curent date and time adn wether from api
+        const weather_data = await fetch(
+          `${apiKeys.base}weather?lat=${lat}&lon=${lon}&units=metric&APPID=${apiKeys.key}` //fetch data from the api
+        );
+        const data = await weather_data.json();
+        this.setState({ //updating the state we created eralier
+          latitude: lat,
+          longitude: lon,
+          city: data.name,
+          temperatureC: Math.round(data.main.temp),
+          temperatureF: Math.round(data.main.temp * 1.8 + 32),
+          humidity: data.main.humidity,
+          main: data.weather[0].main,
+          country: data.sys.country,
+        });
+
+    }
 }
