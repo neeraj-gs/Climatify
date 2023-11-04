@@ -2,6 +2,9 @@
 import React from "react";
 import { apiKeys } from "./apiKeys";
 import ReactAnimatedWeather from "react-animated-weather";
+import Clock from 'react-live-clock'
+import loader from "./images/WeatherIcons.gif";
+import Forcast from './Forecast'
 
 const liveDate = (d)=>{ //specifies the current date
     //used to render data on the current location section
@@ -190,16 +193,16 @@ class Weather extends React.Component {
             <Forcast icon={this.state.icon} weather={this.state.main} />
           </React.Fragment>
         );
-      } else {
-        return (
+      } else { //if teh data is not fetched from the api
+        return ( //this is the page being renderd , if the user is not yet allowd for geolocation
           <React.Fragment>
             <img src={loader} style={{ width: "50%", WebkitUserDrag: "none" }} />
             <h3 style={{ color: "white", fontSize: "22px", fontWeight: "600" }}>
-              Detecting your location
+              Detecting your location .... 
             </h3>
             <h3 style={{ color: "white", marginTop: "10px" }}>
-              Your current location wil be displayed on the App <br></br> & used
-              for calculating Real time weather.
+              Your current location will be displayed on the App <br></br> & used
+              for calculating Real time weather and time in your location.
             </h3>
           </React.Fragment>
         );
