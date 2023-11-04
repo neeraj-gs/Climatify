@@ -36,6 +36,12 @@ const liveDate = (d)=>{ //specifies the current date
       return `${day}, ${date} ${month} ${year}`;
 }
 
+const defaults = {
+  color: "white",
+  size: 112,
+  animate: true,
+};
+
 class Weather extends React.Component {
     //once we allow a location from our browser, it returns a object and we store it in the variables
     state = {
@@ -85,7 +91,7 @@ class Weather extends React.Component {
       }
 
       getPosition = (options) => { //options can be configs like accuracy requiremetns and timeout
-        return new Promise(function (resolve, reject) {
+        return new Promise(function (resolve, reject) { //wrapepd in a promise to handle success and failure
           navigator.geolocation.getCurrentPosition(resolve, reject, options);
         }); //we can also handle success and failure using then adn catch , but we can just taking using it to get the current locaiotn of teh user 
         //we get back data to getCurentpositon then we pass to above getPostion and tehn handles the case of resolve adn reject
@@ -144,7 +150,7 @@ class Weather extends React.Component {
     }
 
     render() {
-      if (this.state.temperatureC) {
+      if (this.state.temperatureC) { //rendered only if the data is fetched successfully
         return (
           <React.Fragment>
             <div className="city">
