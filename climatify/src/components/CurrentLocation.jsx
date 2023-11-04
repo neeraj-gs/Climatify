@@ -1,6 +1,7 @@
 //used class components
 import React from "react";
 import { apiKeys } from "./apiKeys";
+import ReactAnimatedWeather from "react-animated-weather";
 
 const liveDate = (d)=>{ //specifies the current date
     //used to render data on the current location section
@@ -167,6 +168,7 @@ class Weather extends React.Component {
                   animate={defaults.animate}
                 />
                 <p>{this.state.main}</p>
+                {/* disaplys the main , based on switch case icon is rendered */}
               </div>
               <div className="date-time">
                 <div className="dmy">
@@ -174,7 +176,7 @@ class Weather extends React.Component {
                   <div className="current-time">
                     <Clock format="HH:mm:ss" interval={1000} ticking={true} />
                   </div>
-                  <div className="current-date">{dateBuilder(new Date())}</div>
+                  <div className="current-date">{liveDate(new Date())}</div>
                 </div>
                 <div className="temperature">
                   <p>
