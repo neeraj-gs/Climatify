@@ -1,10 +1,17 @@
 //THis is a componet that  shows all the temperatur enad weather detaisl in the second compoent
 //used hooks
 
+import PropTypes from 'prop-types';
 import { useEffect, useState } from "react";
 import { apiKeys } from "./apiKeys";
 import axios from "axios";
 import ReactAnimatedWeather from 'react-animated-weather'
+
+Forcast.propTypes = {
+  icon: PropTypes.string.isRequired, // Validate 'icon' as a required string prop
+  weather: PropTypes.string.isRequired, // Validate 'weather' as a required string prop
+};
+
 
 const Forcast =(props) =>{
     const [query, setQuery] = useState(""); //searching of the econd component [we can also have a dropdown menu giveng diffrrent cities or places of the world]

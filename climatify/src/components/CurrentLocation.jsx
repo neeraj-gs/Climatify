@@ -76,7 +76,8 @@ class Weather extends React.Component {
             })
             .catch((err) => {
               //If user denied location service then standard location weather will le shown on basis of latitude & latitude.
-              this.getWeather(28.67, 77.22);
+              console.log(err);
+              this.getWeather(28.67, 77.22); //used to fetch data from a api givenS
               alert(
                 "You have disabled location service. Your current location will be used for calculating Real time weather."
               );
