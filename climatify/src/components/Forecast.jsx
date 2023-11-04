@@ -51,7 +51,7 @@ const Forcast =(props) =>{
 
 
       useEffect(() => {
-        search("Delhi");
+        search("Bengaluru");
       }, []);
 
 
@@ -74,6 +74,11 @@ const Forcast =(props) =>{
                 placeholder="Search any City"
                 onChange={(e) => setQuery(e.target.value)}
                 value={query}
+                onKeyDown={(e)=>{
+                  if(e.key === "Enter"){
+                    search(e.target.value);
+                  }
+                }}
               />
               <div className="img-box">
                 {" "}
