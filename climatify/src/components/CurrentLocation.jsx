@@ -2,7 +2,7 @@
 import React from "react";
 import { apiKeys } from "./apiKeys";
 import ReactAnimatedWeather from "react-animated-weather";
-import Clock from 'react-live-clock'
+// import Clock from 'react-live-clock'
 import loader from "../images/WeatherIcons.gif";
 import Forcast from './Forecast'
 
@@ -178,7 +178,7 @@ class Weather extends React.Component {
                 <div className="dmy">
                   <div id="txt"></div>
                   <div className="current-time">
-                    <Clock format="HH:mm:ss" interval={1000} ticking={true} />
+                    {/* <Clock format="HH:mm:ss" interval={1000} ticking={true} /> */}
                   </div>
                   <div className="current-date">{liveDate(new Date())}</div>
                 </div>

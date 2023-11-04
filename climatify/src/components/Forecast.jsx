@@ -7,10 +7,7 @@ import { apiKeys } from "./apiKeys";
 import axios from "axios";
 import ReactAnimatedWeather from 'react-animated-weather'
 
-Forcast.propTypes = {
-  icon: PropTypes.string.isRequired, // Validate 'icon' as a required string prop
-  weather: PropTypes.string.isRequired, // Validate 'weather' as a required string prop
-};
+
 
 
 const Forcast =(props) =>{
@@ -136,5 +133,11 @@ const Forcast =(props) =>{
     
 
 }
+
+
+Forcast.propTypes = {
+  icon: PropTypes.string.isRequired, // Validate 'icon' as a required string prop
+  weather: PropTypes.string.isRequired, // Validate 'weather' as a required string prop
+};
 
 export default Forcast;
