@@ -184,7 +184,7 @@ img {
 /*-- Index-Page-Styling --*/
 
 body {
-  background: url("./images/background.jpg");
+  background: url("./images/background1.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -194,6 +194,7 @@ body {
   -o-background-size: cover;
   font-family: "Open Sans", sans-serif;
   text-align: center;
+  opacity: 1;
 }
 
 body a {
@@ -222,8 +223,8 @@ h1 {
 }
 
 .city {
-  width: 60%;
-  height: 100%;
+  width: 50%;
+  height: 500%;
   float: left;
   background: url("./images/city.jpg");
   background-repeat: no-repeat;
@@ -233,23 +234,24 @@ h1 {
   -o-background-size: cover;
   min-height: 500px;
   position: relative;
-  background-position-x: -30px;
+  background-position-x: center;
+  opacity: 0.8;
 }
 
 .title {
   float: right;
   font-family: "Oxygen", sans-serif;
-  padding: 30px 30px 0 0;
+  padding: 40px;
 }
 
 .title h2 {
   color: #fff;
-  font-size: 30px;
-  font-weight: bold;
+  font-size: 25px;
+  font-weight: bolder;
 }
 
 .title h3 {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
   color: #eee;
   margin-top: 0px;
@@ -260,7 +262,7 @@ h1 {
   position: absolute;
   bottom: 0;
   color: #fff;
-  width: 90%;
+  width: 100%;
   padding: 0 30px 10px 30px;
   font-family: "Oxygen", sans-serif;
 }
@@ -276,10 +278,11 @@ div#txt {
   float: left;
   text-align: left;
   position: absolute;
+  bottom: 30px;
 }
 
 .temperature {
-  width: 50%;
+  width: 40%;
   float: right;
   position: relative;
   left: 10px;
@@ -287,24 +290,24 @@ div#txt {
 
 .temperature p {
   font-family: "Raleway", sans-serif;
-  font-size: 80px;
-  font-weight: 100;
+  font-size: 70px;
+  font-weight: 500;
   margin: 0 40px;
 }
 
 .temperature p span {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 200;
 }
 
 .forecast {
-  width: 40%;
+  width: 50%;
   float: left;
   height: 100%;
 }
 
 .forecast-icon {
-  padding: 25px 0;
+  padding: 20px 0;
   /* background: white; */
 }
 
