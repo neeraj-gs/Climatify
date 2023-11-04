@@ -140,8 +140,61 @@ class Weather extends React.Component {
             default:
               this.setState({ icon: "CLEAR_DAY" });
           }
-      
+    }
 
+    render() {
+      if (this.state.temperatureC) {
+        return (
+          <React.Fragment>
+            <div className="city">
+              <div className="title">
+                <h2>{this.state.city}</h2>
+                <h3>{this.state.country}</h3>
+              </div>
+              <div className="mb-icon">
+                {" "}
+                <ReactAnimatedWeather
+                  icon={this.state.icon}
+                  color={defaults.color}
+                  size={defaults.size}
+                  animate={defaults.animate}
+                />
+                <p>{this.state.main}</p>
+              </div>
+              <div className="date-time">
+                <div className="dmy">
+                  <div id="txt"></div>
+                  <div className="current-time">
+                    <Clock format="HH:mm:ss" interval={1000} ticking={true} />
+                  </div>
+                  <div className="current-date">{dateBuilder(new Date())}</div>
+                </div>
+                <div className="temperature">
+                  <p>
+                    {this.state.temperatureC}°<span>C</span>
+                  </p>
+                  {/* <span className="slash">/</span>
+                  {this.state.temperatureF} &deg;F */}
+                </div>
+              </div>
+            </div>
+            <Forcast icon={this.state.icon} weather={this.state.main} />
+          </React.Fragment>
+        );
+      } else {
+        return (
+          <React.Fragment>
+            <img src={loader} style={{ width: "50%", WebkitUserDrag: "none" }} />
+            <h3 style={{ color: "white", fontSize: "22px", fontWeight: "600" }}>
+              Detecting your location
+            </h3>
+            <h3 style={{ color: "white", marginTop: "10px" }}>
+              Your current location wil be displayed on the App <br></br> & used
+              for calculating Real time weather.
+            </h3>
+          </React.Fragment>
+        );
+      }
     }
     
 

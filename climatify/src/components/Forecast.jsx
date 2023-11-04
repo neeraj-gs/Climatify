@@ -1,0 +1,1 @@
+//THis is a componet that  shows all the temperatur enad weather detaisl in the second compoent
