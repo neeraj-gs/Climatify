@@ -4,11 +4,13 @@
 import { useEffect, useState } from "react";
 import { apiKeys } from "./apiKeys";
 import axios from "axios";
+import ReactAnimatedWeather from 'react-animated-weather'
 
 const Forcast =(props) =>{
     const [query, setQuery] = useState(""); //searching of the econd component [we can also have a dropdown menu giveng diffrrent cities or places of the world]
     const [error, setError] = useState("");
     const [weather, setWeather] = useState({}); //calling the weather to store the respionse
+    //stores weather data obtained from api
 
 
     const search = (city) => { //once we get the query request we search it
@@ -30,12 +32,12 @@ const Forcast =(props) =>{
           });
       };
 
-      function checkTime(i) {
-        if (i < 10) {
-          i = "0" + i;
-        } // add zero in front of numbers < 10
-        return i;
-      }
+      // function checkTime(i) {
+      //   if (i < 10) {
+      //     i = "0" + i;
+      //   } // add zero in front of numbers < 10
+      //   return i;
+      // }
 
       const defaults = {
         color: "white",
@@ -65,7 +67,7 @@ const Forcast =(props) =>{
               <input
                 type="text"
                 className="search-bar"
-                placeholder="Search any city"
+                placeholder="Search any City"
                 onChange={(e) => setQuery(e.target.value)}
                 value={query}
               />

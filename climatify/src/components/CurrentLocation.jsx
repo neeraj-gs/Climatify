@@ -3,7 +3,7 @@ import React from "react";
 import { apiKeys } from "./apiKeys";
 import ReactAnimatedWeather from "react-animated-weather";
 import Clock from 'react-live-clock'
-import loader from "./images/WeatherIcons.gif";
+import loader from "../images/WeatherIcons.gif";
 import Forcast from './Forecast'
 
 const liveDate = (d)=>{ //specifies the current date
