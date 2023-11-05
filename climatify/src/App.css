@@ -131,13 +131,18 @@ h1 {
   letter-spacing: 7px;
   margin-top: 50px;
 }
+.current-time{
+  position: relative;
+  font-size: x-large;
+  font-weight: bolder;
+}
 
 
 /* Container Styles */
 .container {
   display: flex;
   flex-direction: row; /* Change to row to display components side by side */
-  width: 90%; /* Adjust the width as needed */
+  width: 70%; /* Adjust the width as needed */
   height: 60vh;
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.73);
@@ -184,13 +189,13 @@ h1 {
 /* Temperature Styles */
 .temperature {
   position: absolute;
-  bottom: 20px;
+  bottom: 50px;
   /* right: 10px; Adjust the right position for the temperature */
   /* text-align: right; */
 }
 
 .temperature p {
-  font-size: 40px;
+  font-size: 30px;
   margin: 0;
 }
 
