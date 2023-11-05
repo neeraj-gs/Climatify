@@ -2,9 +2,9 @@
 import React from "react";
 import { apiKeys } from "./apiKeys";
 import ReactAnimatedWeather from "react-animated-weather";
-// import Clock from 'react-live-clock'
 import loader from "../images/WeatherIcons.gif";
 import Forcast from './Forecast'
+import LiveClock from "./LiveClock";
 
 
 const liveDate = (d)=>{ //specifies the current date
@@ -47,7 +47,9 @@ const defaults = {
   animate: true,
 };
 
+
 class Weather extends React.Component {
+    
     //once we allow a location from our browser, it returns a object and we store it in the variables
     state = {
       latitude: undefined, //to get data of the current location
@@ -179,8 +181,8 @@ class Weather extends React.Component {
               <div className="date-time">
                 <div className="dmy">
                   <div id="txt"></div>
-                  <div className="current-time">
-                    {/* <Clock format="HH:mm:ss" interval={1000} ticking={true} /> */}
+                  <div  className="current-time">
+                    <LiveClock />
                   </div>
                   <div className="current-date">{liveDate(new Date())}</div>
                 </div>
