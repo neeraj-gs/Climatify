@@ -6,6 +6,7 @@ import ReactAnimatedWeather from "react-animated-weather";
 import loader from "../images/WeatherIcons.gif";
 import Forcast from './Forecast'
 
+
 const liveDate = (d)=>{ //specifies the current date
     //used to render data on the current location section
     let months = [
@@ -109,6 +110,7 @@ class Weather extends React.Component {
           `${apiKeys.base}weather?lat=${lat}&lon=${lon}&units=metric&APPID=${apiKeys.key}` //fetch data from the api
         );
         const data = await weather_data.json();
+        console.log(data);
         this.setState({ //updating the state we created eralier
           latitude: lat,
           longitude: lon,
