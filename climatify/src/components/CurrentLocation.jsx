@@ -197,14 +197,16 @@ class Weather extends React.Component {
       } else { //if teh data is not fetched from the api
         return ( //this is the page being renderd , if the user is not yet allowd for geolocation
           <React.Fragment>
-            <img src={loader} style={{ width: "50%", WebkitUserDrag: "none" }} />
-            <h3 style={{ color: "white", fontSize: "22px", fontWeight: "600" }}>
-              Detecting your location .... 
-            </h3>
-            <h3 style={{ color: "white", marginTop: "10px" }}>
-              Your current location will be displayed on the App <br></br> & used
-              for calculating Real time weather and time in your location.
-            </h3>
+            <div style={{display:"flex", flexDirection:'column',justifyContent:'center',alignItems:'center',marginLeft:'100px'}}>
+              <img src={loader} style={{top:"0px", width: "100%", WebkitUserDrag: "none" }} />
+              <h3 style={{ color: "skyblue", fontSize: "22px", fontWeight: "600" }}>
+                Detecting your location .... 
+              </h3>
+              <h3 style={{ color: "white", marginTop: "30px" }}>
+                We use Location to display your current weather report <br />
+                Your Cuurent location, time and date will be available.
+              </h3>
+            </div>
           </React.Fragment>
         );
       }

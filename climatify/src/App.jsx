@@ -12,9 +12,10 @@ function App() {
       </div>
 
       <div className="footer-info">
-        <a href="https://github.com/neeraj-gs/Weather-App">
-          Download Source Code
-        </a>{" "}
+      <a href="https://github.com/neeraj-gs/Weather-App" target="_blank" rel="noreferrer">
+        Download Source Code
+      </a>
+      {" "}
         | Created WIth ❤️️ by Neeraj GS{" "}
       </div>
 
