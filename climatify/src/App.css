@@ -146,8 +146,8 @@ h1 {
   height: 65vh;
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.73);
-  padding: 10px; /* Add padding to the container for spacing */
-  margin-bottom: 100px;
+  padding: 10px; 
+  margin-bottom: 90px;
 }
 
 /* Current Location Styles */
@@ -164,7 +164,7 @@ h1 {
   position: relative;
   background-position-x: center;
   opacity: 2;
-  margin-bottom: 20px; /* Add margin to create space between sections */
+  margin-bottom: 0px; /* Add margin to create space between sections */
 }
 
 .title {
