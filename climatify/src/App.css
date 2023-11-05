@@ -143,7 +143,7 @@ h1 {
   display: flex;
   flex-direction: row; /* Change to row to display components side by side */
   width: 70%; /* Adjust the width as needed */
-  height: 60vh;
+  height: 65vh;
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.73);
   padding: 10px; /* Add padding to the container for spacing */
@@ -318,7 +318,7 @@ today-weather ul li:last-child {
 
 @media screen and (max-width: 736px) {
   .temperature p {
-    font-size: 80px;
+    font-size: 30px;
   }
   .dmy {
     padding-top: 10px;
@@ -494,14 +494,6 @@ today-weather ul li:last-child {
 
 
 
-@media screen and (max-width: 464px) {
-  h1 {
-    font-size: 30px;
-  }
-  .temperature p{
-    font-size: 15px;
-  }
-}
 
 @media screen and (max-width: 375px) {
   h1 {
@@ -523,6 +515,7 @@ today-weather ul li:last-child {
     font-size: 10px;
   }
 }
+
 
 /*-- //Responsive Code --*/
 .cityHead {
