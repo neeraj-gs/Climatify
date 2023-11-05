@@ -110,7 +110,7 @@ body {
   -o-background-size: cover;
   font-family: "Open Sans", sans-serif;
   text-align: center;
-  opacity: 1;
+  opacity: 2;
 }
 
 body a {
@@ -132,16 +132,16 @@ h1 {
   margin-top: 50px;
 }
 
-/* ... (Previous CSS) ... */
 
 /* Container Styles */
 .container {
   display: flex;
   flex-direction: row; /* Change to row to display components side by side */
-  width: 80%; /* Adjust the width as needed */
+  width: 90%; /* Adjust the width as needed */
+  height: 60vh;
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.73);
-  padding: 20px; /* Add padding to the container for spacing */
+  padding: 10px; /* Add padding to the container for spacing */
 }
 
 /* Current Location Styles */
@@ -157,7 +157,7 @@ h1 {
   -o-background-size: cover;
   position: relative;
   background-position-x: center;
-  opacity: 0.8;
+  opacity: 2;
   margin-bottom: 20px; /* Add margin to create space between sections */
 }
 
@@ -176,8 +176,6 @@ h1 {
   padding: 0 30px 10px 30px;
   font-family: "Oxygen", sans-serif;
 }
-
-/* ... (Remaining CSS) ... */
 
 /* Forecast Styles */
 .forecast {
