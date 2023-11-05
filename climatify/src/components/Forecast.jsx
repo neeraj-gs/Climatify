@@ -7,9 +7,6 @@ import { apiKeys } from "./apiKeys";
 import axios from "axios";
 import ReactAnimatedWeather from 'react-animated-weather'
 
-
-
-
 const Forcast =(props) =>{
     const [query, setQuery] = useState(""); //searching of the econd component [we can also have a dropdown menu giveng diffrrent cities or places of the world]
     const [error, setError] = useState("");
@@ -35,13 +32,6 @@ const Forcast =(props) =>{
             setError({ message: "Not Found , Enter a Correct City Name", query: query });
           });
       };
-
-      // function checkTime(i) {
-      //   if (i < 10) {
-      //     i = "0" + i;
-      //   } // add zero in front of numbers < 10
-      //   return i;
-      // }
 
       const defaults = {
         color: "white",

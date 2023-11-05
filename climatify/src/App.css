@@ -1,3 +1,4 @@
+/* Reset CSS */
 html,
 body,
 div,
@@ -44,7 +45,7 @@ dl,
 dt,
 dd,
 ol,
-nav ul,
+ul,
 nav li,
 fieldset,
 form,
@@ -85,105 +86,20 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-ol,
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-/* start editing from here */
-a {
-  text-decoration: none;
-}
-.txt-rt {
-  text-align: right;
-} /* text align right */
-.txt-lt {
-  text-align: left;
-} /* text align left */
-.txt-center {
-  text-align: center;
-} /* text align center */
-.float-rt {
-  float: right;
-} /* float right */
-.float-lt {
-  float: left;
-} /* float left */
-.clear {
-  clear: both;
-} /* clear float */
-.pos-relative {
-  position: relative;
-} /* Position Relative */
-.pos-absolute {
-  position: absolute;
-} /* Position Absolute */
-.vertical-base {
-  vertical-align: baseline;
-} /* vertical align baseline */
-.vertical-top {
-  vertical-align: top;
-} /* vertical align top */
-.underline {
-  padding-bottom: 5px;
-  border-bottom: 1px solid #eee;
-  margin: 0 0 20px 0;
-} /* Add 5px bottom padding and a underline */
-nav.vertical ul li {
-  display: block;
-} /* vertical menu */
-nav.horizontal ul li {
-  display: inline-block;
-} /* horizontal menu */
-img {
-  max-width: 100%;
-}
-.current-time {
-  font-size: 35px;
-  font-weight: 100;
-  margin-bottom: 10px;
-  letter-spacing: 1px;
-}
-.current-date {
-  font-size: 18px;
-  font-weight: 100;
-  letter-spacing: 1px;
+
+/* Box Sizing */
+html {
+  box-sizing: border-box;
 }
 
-/*-- //Reset Code --*/
+*, *::before, *::after {
+  box-sizing: inherit;
+}
 
-/*-- Index-Page-Styling --*/
-
+/* Body Styles */
 body {
+  margin-top: 0;
+  padding-top: 200px;
   background: url("./images/background1.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -206,6 +122,7 @@ body a {
   text-decoration: none;
 }
 
+/* Header Styles */
 h1 {
   font-size: 50px;
   font-weight: 400;
@@ -215,16 +132,22 @@ h1 {
   margin-top: 50px;
 }
 
+/* ... (Previous CSS) ... */
+
+/* Container Styles */
 .container {
-  width: 65%;
-  height: 80vh;
-  margin: 50px auto;
+  display: flex;
+  flex-direction: row; /* Change to row to display components side by side */
+  width: 80%; /* Adjust the width as needed */
+  margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.73);
+  padding: 20px; /* Add padding to the container for spacing */
 }
 
+/* Current Location Styles */
 .city {
-  width: 50%;
-  height: 500%;
+  width: 50%; /* Set the width to 50% to display in columns */
+  min-height: 400px; /* Adjust the minimum height as needed */
   float: left;
   background: url("./images/city.jpg");
   background-repeat: no-repeat;
@@ -232,10 +155,10 @@ h1 {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  min-height: 500px;
   position: relative;
   background-position-x: center;
   opacity: 0.8;
+  margin-bottom: 20px; /* Add margin to create space between sections */
 }
 
 .title {
@@ -244,20 +167,7 @@ h1 {
   padding: 40px;
 }
 
-.title h2 {
-  color: #fff;
-  font-size: 25px;
-  font-weight: bolder;
-}
-
-.title h3 {
-  font-size: 20px;
-  font-weight: bold;
-  color: #eee;
-  margin-top: 0px;
-  text-align: right;
-}
-
+/* Date and Time Styles */
 .date-time {
   position: absolute;
   bottom: 0;
@@ -267,43 +177,11 @@ h1 {
   font-family: "Oxygen", sans-serif;
 }
 
-div#txt {
-  font-size: 35px;
-  font-weight: 100;
-  margin-bottom: 10px;
-  letter-spacing: 1px;
-}
+/* ... (Remaining CSS) ... */
 
-.dmy {
-  float: left;
-  text-align: left;
-  position: absolute;
-  bottom: 30px;
-}
-
-.temperature {
-  width: 40%;
-  float: right;
-  position: relative;
-  left: 10px;
-}
-
-.temperature p {
-  font-family: "Raleway", sans-serif;
-  font-size: 70px;
-  font-weight: 500;
-  margin: 0 40px;
-}
-
-.temperature p span {
-  font-size: 40px;
-  font-weight: 200;
-}
-
+/* Forecast Styles */
 .forecast {
-  width: 50%;
-  float: left;
-  height: 100%;
+  width: 50%; /* Set the width to 50% to display in columns */
 }
 
 .forecast-icon {
@@ -334,35 +212,27 @@ div#txt {
   padding-left: 20px;
 }
 
-.today-weather ul li span {
+today-weather ul li span {
   float: right;
   padding-right: 10px;
 }
 
-.today-weather ul li:nth-child(5) {
+today-weather ul li:last-child {
   border-bottom: none;
 }
 
-.footer {
-  padding-bottom: 20px;
+/* Footer Styles */
+.footer-info {
+  color: white;
+  margin-top: 20px;
+  padding-top: 20px;
 }
 
-.copyright p {
-  color: #fff;
+.footer-info a {
+  color: floralwhite;
+  font-weight: bold;
 }
 
-.copyright p a {
-  color: #fff;
-}
-/*--w3layouts--*/
-/*--agileits--*/
-.copyright p a:hover {
-  color: #ffeb3b;
-}
-
-/*-- //Index-Page-Styling --*/
-
-/*-- Responsive Code --*/
 
 @media screen and (max-width: 1920px) {
   .container {
