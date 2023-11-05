@@ -147,6 +147,7 @@ h1 {
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.73);
   padding: 10px; /* Add padding to the container for spacing */
+  margin-bottom: 100px;
 }
 
 /* Current Location Styles */
@@ -250,7 +251,7 @@ today-weather ul li:last-child {
 /* Footer Styles */
 .footer-info {
   color: white;
-  margin-top: 20px;
+  margin-top: 30px;
   padding-top: 20px;
 }
 
