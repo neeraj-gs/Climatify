@@ -142,7 +142,7 @@ h1 {
 .container {
   display: flex;
   flex-direction: row; /* Change to row to display components side by side */
-  width: 70%; /* Adjust the width as needed */
+  width: 60%; /* Adjust the width as needed */
   height: 65vh;
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.73);
@@ -400,12 +400,12 @@ today-weather ul li:last-child {
   }
 }
 
-@media screen and (max-width: 533px) {
+@media screen and (max-width: 559px) {
   h1 {
     font-size: 33px;
   }
   .temperature p{
-    font-size: 15px;
+    display: none;
   }
 }
 
