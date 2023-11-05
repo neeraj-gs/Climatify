@@ -12,13 +12,10 @@ function App() {
       </div>
 
       <div className="footer-info">
-        <a href="https://www.htmlhints.com/article/how-to-create-toggle-switch/93">
+        <a href="https://github.com/neeraj-gs/Weather-App">
           Download Source Code
         </a>{" "}
         | Created WIth ❤️️ by Neeraj GS{" "}
-        <a target="_blank" href="https://www.gauravghai.dev/" rel="noreferrer">
-          Gaurav Ghai
-        </a>{" "}
       </div>
 
       

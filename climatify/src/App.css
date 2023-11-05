@@ -162,20 +162,43 @@ h1 {
 }
 
 .title {
+  color: white;
   float: right;
   font-family: "Oxygen", sans-serif;
   padding: 40px;
+  font-size: larger;
+  font-weight: bolder;
 }
 
 /* Date and Time Styles */
 .date-time {
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
+  left: 10px; /* Adjust the left position for the date and time */
   color: #fff;
-  width: 100%;
-  padding: 0 30px 10px 30px;
   font-family: "Oxygen", sans-serif;
+  text-align: left; /* Adjust text alignment to left */
+  font-size: 20px;
 }
+
+/* Temperature Styles */
+.temperature {
+  position: absolute;
+  bottom: 20px;
+  /* right: 10px; Adjust the right position for the temperature */
+  text-align: right;
+}
+
+.temperature p {
+  font-size: 50px;
+  margin: 0;
+}
+
+.temperature span {
+  font-size: 20px;
+  vertical-align: middle;
+}
+
 
 /* Forecast Styles */
 .forecast {
@@ -459,13 +482,17 @@ today-weather ul li:last-child {
     min-height: 315px;
   }
   .dmy {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   .date {
     font-size: 18px;
   }
   .temperature p {
     padding-bottom: 15px;
+    font-size: 30px;
+  }
+  .temperature span {
+
   }
 }
 
