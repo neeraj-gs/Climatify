@@ -147,7 +147,7 @@ h1 {
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.73);
   padding: 10px; 
-  margin-bottom: 70px;
+  margin-bottom: 50px;
 }
 
 /* Current Location Styles */
@@ -399,6 +399,7 @@ today-weather ul li:last-child {
     font-size: 14px;
   }
 }
+
 
 @media screen and (max-width: 559px) {
   h1 {
