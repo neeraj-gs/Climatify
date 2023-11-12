@@ -9,7 +9,7 @@ import LiveClock from "./LiveClock";
 
 const liveDate = (d)=>{ //specifies the current date
     //used to render data on the current location section
-    let months = [
+    const months = [
         "January",
         "February",
         "March",
@@ -23,7 +23,7 @@ const liveDate = (d)=>{ //specifies the current date
         "November",
         "December",
       ];
-      let days = [
+      const days = [
         "Sunday",
         "Monday",
         "Tuesday",
@@ -33,10 +33,10 @@ const liveDate = (d)=>{ //specifies the current date
         "Saturday",
       ];
     
-      let day = days[d.getDay()]; //to get the current day ,returns 0 to 6 ,so compared with array index
-      let date = d.getDate(); //gives number between 1 to 31 based on date
-      let month = months[d.getMonth()]; //returns 0 to 11 , so array index is used
-      let year = d.getFullYear(); //returns 4 digits of current year
+      const day = days[d.getDay()]; //to get the current day ,returns 0 to 6 ,so compared with array index
+      const date = d.getDate(); //gives number between 1 to 31 based on date
+      const month = months[d.getMonth()]; //returns 0 to 11 , so array index is used
+      const year = d.getFullYear(); //returns 4 digits of current year
     
       return `${day}, ${date} ${month} ${year}`;
 }
