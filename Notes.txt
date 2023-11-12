@@ -22,3 +22,4 @@ There is an icon even for the lower of second compoent , for diffrent temperatir
 
 
 Converting JS to TS
+It is easier to bootsrap a react project usnig vite
