@@ -252,8 +252,10 @@ today-weather ul li:last-child {
 /* Footer Styles */
 .footer-info {
   color: white;
-  margin-top: 30px;
-  padding-top: 20px;
+  font-weight: bolder;
+  margin-top: 10px;
+  padding-top: 10px;
+  margin-bottom: 50px;
 }
 
 .footer-info a {
