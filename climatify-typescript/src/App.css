@@ -142,17 +142,17 @@ h1 {
 .container {
   display: flex;
   flex-direction: row; /* Change to row to display components side by side */
-  width: 60%; /* Adjust the width as needed */
-  height: 65vh;
+  width: 65%; /* Adjust the width as needed */
+  height: 80vh;
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.73);
-  padding: 10px; 
+  padding: 12px; 
   margin-bottom: 50px;
 }
 
 /* Current Location Styles */
 .city {
-  width: 50%; /* Set the width to 50% to display in columns */
+  width: 60%; /* Set the width to 50% to display in columns */
   min-height: 400px; /* Adjust the minimum height as needed */
   float: left;
   background: url("./images/city2.png");
@@ -164,44 +164,45 @@ h1 {
   position: relative;
   background-position-x: center;
   opacity: 2;
-  margin-bottom: 0px; /* Add margin to create space between sections */
+  margin-bottom: 4px; /* Add margin to create space between sections */
 }
 
 .title {
   color: white;
   float: right;
   font-family: "Oxygen", sans-serif;
-  padding: 40px;
-  font-size: larger;
+  padding: 60px;
+  font-size: x-large;
   font-weight: bolder;
 }
 
 /* Date and Time Styles */
 .date-time {
   position: absolute;
-  bottom: 10px;
-  left: 10px; /* Adjust the left position for the date and time */
+  bottom: 20px;
+  left: 20px; /* Adjust the left position for the date and time */
   color: #fff;
   font-family: "Oxygen", sans-serif;
+  font-weight: bolder;
   text-align: left; /* Adjust text alignment to left */
-  font-size: 20px;
+  font-size: 30px;
 }
 
 /* Temperature Styles */
 .temperature {
   position: absolute;
-  bottom: 50px;
+  bottom: 65px;
   /* right: 10px; Adjust the right position for the temperature */
   /* text-align: right; */
 }
 
 .temperature p {
-  font-size: 30px;
+  font-size: 35px;
   margin: 0;
 }
 
 .temperature span {
-  font-size: 16px;
+  font-size: 26px;
   vertical-align: middle;
 }
 
