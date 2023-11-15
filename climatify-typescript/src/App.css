@@ -209,11 +209,11 @@ h1 {
 
 /* Forecast Styles */
 .forecast {
-  width: 50%; /* Set the width to 50% to display in columns */
+  width: 45%; /* Set the width to 50% to display in columns */
 }
 
 .forecast-icon {
-  padding: 20px 0;
+  padding: 15px 0;
   /* background: white; */
 }
 
@@ -221,23 +221,23 @@ h1 {
   text-transform: capitalize;
   font-size: 50px;
   color: #fff;
-  width: 80%;
-  margin: 0 auto 10px;
-  padding-bottom: 10px;
+  width: 90%;
+  margin: 0 auto 20px;
+  padding-bottom: 20px;
   border-width: thin;
   border-bottom: 1px solid #eee;
 }
 
 .today-weather ul li {
-  width: 74%;
+  width: 65%;
   margin: 0 auto;
-  line-height: 39px;
+  line-height: 40px;
   border-width: thin;
   border-bottom: 1px solid #777;
   color: #eee;
-  font-weight: 600;
-  text-align: left;
-  padding-left: 20px;
+  font-weight: 900;
+  text-align: start;
+  padding-left: 10px;
 }
 
 today-weather ul li span {
