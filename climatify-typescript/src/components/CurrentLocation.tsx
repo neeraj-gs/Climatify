@@ -90,7 +90,7 @@ class Weather extends React.Component {
         }
     
         this.timerID = setInterval( //pdate data at regular intervals in web applications, ensuring that the information remains current 
-          () => this.getWeather(this.state.lat, this.state.lon)
+          () => this.getWeather(this.state.latitude, this.state.longitude)
           ,600000); //it calls every 10 min and fetches the data from api
       }
 

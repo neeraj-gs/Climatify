@@ -7,11 +7,33 @@ import { apiKeys } from "./apiKeys";
 import axios from "axios";
 import ReactAnimatedWeather from 'react-animated-weather'
 
+interface WeatherData {
+  main?: {
+    temp: number;
+    humidity: number;
+  };
+  name?: string;
+  sys?: {
+    country: string;
+  };
+  visibility?: number;
+  wind?: {
+    speed: number;
+  };
+  weather?: [
+    {
+      icon: string;
+      main: string;
+    }
+  ];
+}
+
 const Forcast =(props) =>{
-    const [query, setQuery] = useState(""); //searching of the econd component [we can also have a dropdown menu giveng diffrrent cities or places of the world]
-    const [error, setError] = useState("");
-    const [weather, setWeather] = useState({}); //calling the weather to store the respionse
+    const [query, setQuery] = useState<string>(""); //searching of the econd component [we can also have a dropdown menu giveng diffrrent cities or places of the world]
+    const [error, setError] = useState<string>("");
+    // const [weather, setWeather] = useState({}); //calling the weather to store the respionse
     //stores weather data obtained from api
+    const [weather, setWeather] = useState<WeatherData>({});
 
 
     const search = (city) => { //once we get the query request we search it
@@ -27,9 +49,9 @@ const Forcast =(props) =>{
           })
           .catch(function (error) {
             console.log(error);
-            setWeather("");
+            setWeather({});
             setQuery("");
-            setError({ message: "Not Found , Enter a Correct City Name", query: query });
+            setError("Not Found , Enter a Correct City Name");
           });
       };
 
@@ -42,7 +64,7 @@ const Forcast =(props) =>{
 
       useEffect(() => {
         search("Bengaluru");
-      }, []);
+      }, );
 
 
       return (
@@ -62,11 +84,11 @@ const Forcast =(props) =>{
                 type="text"
                 className="search-bar"
                 placeholder="Search any City"
-                onChange={(e) => setQuery(e.target.value)}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setQuery(e.target.value)}
                 value={query}
                 onKeyDown={(e)=>{
                   if(e.key === "Enter"){
-                    search(e.target.value);
+                    search(e.currentTarget.value);
                   }
                 }}
               />
@@ -118,7 +140,7 @@ const Forcast =(props) =>{
                 </div>
               ) : (
                 <li>
-                  {error.query} {error.message}
+                  {query} {error}
                 </li>
               )}
             </ul>
