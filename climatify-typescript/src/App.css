@@ -144,10 +144,10 @@ h1 {
   flex-direction: row; /* Change to row to display components side by side */
   width: 65%; /* Adjust the width as needed */
   height: 80vh;
-  margin: 0 auto;
+  margin: -80px auto 0;
   background-color: rgba(0, 0, 0, 0.73);
   padding: 12px; 
-  margin-bottom: 50px;
+  margin-bottom: 35px;
 }
 
 /* Current Location Styles */
