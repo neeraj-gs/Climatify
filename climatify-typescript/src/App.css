@@ -191,7 +191,7 @@ h1 {
 /* Temperature Styles */
 .temperature {
   position: absolute;
-  bottom: 65px;
+  bottom: 85px;
   /* right: 10px; Adjust the right position for the temperature */
   /* text-align: right; */
 }
@@ -266,31 +266,31 @@ today-weather ul li:last-child {
 
 @media screen and (max-width: 1920px) {
   .container {
-    width: 50%;
+    width: 70%;
   }
 }
 
 @media screen and (max-width: 1440px) {
   .container {
-    width: 55%;
+    width: 75%;
   }
 }
 
 @media screen and (max-width: 1280px) {
   .container {
-    width: 60%;
+    width: 80%;
   }
 }
 
 @media screen and (max-width: 1024px) {
   .container {
-    width: 75%;
+    width: 85%;
   }
 }
 
 @media screen and (max-width: 966px) {
   .container {
-    width: 90%;
+    width: 85%;
   }
 }
 
@@ -302,27 +302,46 @@ today-weather ul li:last-child {
   /*--agileits--*/
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 804px) {
   h1 {
     font-size: 35px;
   }
-  /* .temperature p {
-    font-size: 100px;
-  } */
   .temperature p {
     font-size: 30px; /* Decrease the font size at this screen width */
+    /* margin-bottom: -20px; */
   }
   .temperature span {
     font-size: 14px; /* Adjust the font size for the span at this screen width */
   }
   .dmy {
-    padding-top: 25px;
+    padding-top: 35px;
+  }
+  .date-time{
+    font-size: x-large;
   }
 }
 
 @media screen and (max-width: 736px) {
+  .container{
+    flex-wrap: wrap;
+    height: fit-content;
+    padding-bottom: 60px;
+    padding-top: 20px;
+  }
+  .city{
+    width: 100%;
+    min-height: 550px;
+  }
+  .forecast{
+    width: 100%;
+    height: fit-content;
+  }
+  .temperature{
+    position: absolute;
+    margin-bottom: -28px;
+  }
   .temperature p {
-    font-size: 30px;
+    font-size: 40px;
   }
   .dmy {
     padding-top: 10px;
@@ -341,8 +360,8 @@ today-weather ul li:last-child {
     margin-top: 30px;
   }
   .container {
-    width: 95%;
-    margin-top: 30px;
+    width: 90%;
+    margin-top: -80px;
   }
 }
 
@@ -376,30 +395,23 @@ today-weather ul li:last-child {
   }
   .city {
     width: 100%;
-    min-height: 300px;
+    /* min-height: 300px; */
   }
   .temperature {
     text-align: right;
   }
   .temperature p {
-    font-size: 20px;
+    font-size: 33px;
   }
   .dmy {
-    padding-top: 35px;
+    padding-top: 30px;
   }
   .forecast-icon {
-    margin: 10px 0;
+    margin: 20px 0;
   }
   .forecast {
     width: 100%;
-    padding-bottom: 30px;
-  }
-  .copyright {
     padding-bottom: 20px;
-  }
-  .copyright p {
-    line-height: 30px;
-    font-size: 14px;
   }
 }
 
@@ -408,116 +420,48 @@ today-weather ul li:last-child {
   h1 {
     font-size: 33px;
   }
+}
+
+@media screen and (max-width: 507px) {
+  h1 {
+    font-size: 23px;
+  }
+  .temperature{
+    margin-bottom: -45px;
+  }
+  .date-time{
+    font-size: x-large;
+  }
+}
+
+@media screen and (max-width: 417px) {
+  .container{
+    width: 95%;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  .temperature{
+    margin-bottom: -55px;
+  }
   .temperature p{
-    display: none;
+    font-size: 30px;
+  }
+  .date-time{
+    font-size: large;
   }
 }
 
-@media screen and (max-width: 480px) {
-  /*--w3layouts--*/
-  /*--agileits--*/
-  h1 {
-    font-size: 28px;
-    letter-spacing: 2px;
+
+
+
+
+@media screen and (max-width: 308px) {
+  .date-time{
+    font-size: medium;
   }
-  .container {
-    margin-bottom: 20px;
-  }
-  .forecast-icon {
-    margin: 40px 0 10px;
-  }
-  .forecast-icon img {
-    width: 100px;
-  }
-  .today-weather h3 {
-    font-size: 40px;
-  }
-  .city {
-    min-height: 450px;
-  }
-  .title h2 {
+  .temperature p{
     font-size: 25px;
-  }
-  .title h3 {
-    font-size: 14px;
-  }
-  .date-time {
-    width: 100%;
-    padding: 0;
-  }
-  .dmy {
-    padding: 0;
-    margin-bottom: 35px;
-    text-align: center;
-    width: 100%;
-  }
-  div#txt {
-    font-size: 30px;
-  }
-  .date {
-    font-size: 22px;
-  }
-  .temperature {
-    text-align: center;
-    width: 100%;
-  }
-  .copyright {
-    padding: 20px;
-  }
-  .temperature p {
-    font-size: 10px;
-    padding-bottom: 15px;
-  }
-  .forecast-icon img {
-    width: 65px;
-  }
-  .today-weather h3 {
-    font-size: 30px;
-  }
-  .copyright p {
-    line-height: 25px;
-    font-size: 13px;
-  }
-  .container {
-    height: 60vh;
-    margin-top: 60px;
-  }
-  .mb-icon {
-    top: 20% !important;
-    display: block !important;
-  }
-  .forecast-icon,
-  .today-weather h3 {
-    display: none;
-  }
-  .today-weather {
-    background-color: rgba(0, 0, 0, 0.73);
-    margin-top: 22px;
-    padding: 25px 0px;
-  }
-}
-
-
-
-
-@media screen and (max-width: 375px) {
-  h1 {
-    font-size: 26px;
-    line-height: 1.5em;
-    letter-spacing: 0;
-  }
-  .city {
-    min-height: 315px;
-  }
-  .dmy {
-    margin-bottom: 20px;
-  }
-  .date {
-    font-size: 18px;
-  }
-  .temperature p {
-    padding-bottom: 15px;
-    font-size: 10px;
   }
 }
 
