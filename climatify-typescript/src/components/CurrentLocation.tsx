@@ -5,6 +5,7 @@ import ReactAnimatedWeather from "react-animated-weather";
 import loader from "../images/WeatherIcons.gif";
 import Forcast from './Forecast'
 import LiveClock from "./LiveClock";
+import { CSSProperties } from 'react';
 
 
 const liveDate = (d)=>{ //specifies the current date
@@ -49,7 +50,9 @@ const defaults = {
 
 
 class Weather extends React.Component {
-    
+
+  private timerID: ReturnType<typeof setInterval> | undefined;
+
     //once we allow a location from our browser, it returns a object and we store it in the variables
     state = {
       latitude: undefined, //to get data of the current location
@@ -65,6 +68,7 @@ class Weather extends React.Component {
       sunrise: undefined,
       sunset: undefined,
       errorMsg: undefined,
+      main:undefined
     };
 
 
@@ -75,6 +79,7 @@ class Weather extends React.Component {
             .then((position) => {
                 //position is an object that gives some data and contains a latitude and longitude
                 console.log(position)
+                // @ts-expect-error coors is coming form external api key so
                 this.getWeather(position.coords.latitude, position.coords.longitude); //used to fetch data from a api givenS
             })
             .catch((err) => {
@@ -98,7 +103,7 @@ class Weather extends React.Component {
         clearInterval(this.timerID); //clears all the schedule , so taht our code restarts from start when teh app loads next time
       }
 
-      getPosition = (options) => { //options can be configs like accuracy requiremetns and timeout
+      getPosition = (options={}) => { //options can be configs like accuracy requiremetns and timeout
         return new Promise(function (resolve, reject) { //wrapepd in a promise to handle success and failure
           navigator.geolocation.getCurrentPosition(resolve, reject, options);
         }); //we can also handle success and failure using then adn catch , but we can just taking using it to get the current locaiotn of teh user 
@@ -202,7 +207,8 @@ class Weather extends React.Component {
         return ( //this is the page being renderd , if the user is not yet allowd for geolocation
           <React.Fragment>
             <div style={{display:"flex", flexDirection:'column',justifyContent:'center',alignItems:'center',margin:'0 auto'}}>
-              <img src={loader} style={{top:"0px", width: "100%", WebkitUserDrag: "none" }} />
+              {/* <img src={loader} style={{top:"0px", width: "100%", WebkitUserDrag: "none" }} /> */}
+              <img src={loader} style={{ top: "0px", width: "100%", WebkitUserDrag: "none" } as CSSProperties} />
               <h3 style={{ color: "skyblue", fontSize: "22px", fontWeight: "600" }}>
                 Detecting your location .... 
               </h3>
