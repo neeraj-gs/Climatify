@@ -142,17 +142,17 @@ h1 {
 .container {
   display: flex;
   flex-direction: row; /* Change to row to display components side by side */
-  width: 60%; /* Adjust the width as needed */
-  height: 65vh;
-  margin: 0 auto;
+  width: 65%; /* Adjust the width as needed */
+  height: 80vh;
+  margin: -100px auto 0;
   background-color: rgba(0, 0, 0, 0.73);
-  padding: 10px; 
-  margin-bottom: 50px;
+  padding: 12px; 
+  margin-bottom: 35px;
 }
 
 /* Current Location Styles */
 .city {
-  width: 50%; /* Set the width to 50% to display in columns */
+  width: 60%; /* Set the width to 50% to display in columns */
   min-height: 400px; /* Adjust the minimum height as needed */
   float: left;
   background: url("./images/city2.png");
@@ -164,55 +164,56 @@ h1 {
   position: relative;
   background-position-x: center;
   opacity: 2;
-  margin-bottom: 0px; /* Add margin to create space between sections */
+  margin-bottom: 4px; /* Add margin to create space between sections */
 }
 
 .title {
   color: white;
   float: right;
   font-family: "Oxygen", sans-serif;
-  padding: 40px;
-  font-size: larger;
+  padding: 60px;
+  font-size: x-large;
   font-weight: bolder;
 }
 
 /* Date and Time Styles */
 .date-time {
   position: absolute;
-  bottom: 10px;
-  left: 10px; /* Adjust the left position for the date and time */
+  bottom: 20px;
+  left: 20px; /* Adjust the left position for the date and time */
   color: #fff;
   font-family: "Oxygen", sans-serif;
+  font-weight: bolder;
   text-align: left; /* Adjust text alignment to left */
-  font-size: 20px;
+  font-size: 30px;
 }
 
 /* Temperature Styles */
 .temperature {
   position: absolute;
-  bottom: 50px;
+  bottom: 85px;
   /* right: 10px; Adjust the right position for the temperature */
   /* text-align: right; */
 }
 
 .temperature p {
-  font-size: 30px;
+  font-size: 35px;
   margin: 0;
 }
 
 .temperature span {
-  font-size: 16px;
+  font-size: 26px;
   vertical-align: middle;
 }
 
 
 /* Forecast Styles */
 .forecast {
-  width: 50%; /* Set the width to 50% to display in columns */
+  width: 45%; /* Set the width to 50% to display in columns */
 }
 
 .forecast-icon {
-  padding: 20px 0;
+  padding: 15px 0;
   /* background: white; */
 }
 
@@ -220,23 +221,23 @@ h1 {
   text-transform: capitalize;
   font-size: 50px;
   color: #fff;
-  width: 80%;
-  margin: 0 auto 10px;
-  padding-bottom: 10px;
+  width: 90%;
+  margin: 0 auto 20px;
+  padding-bottom: 20px;
   border-width: thin;
   border-bottom: 1px solid #eee;
 }
 
 .today-weather ul li {
-  width: 74%;
+  width: 65%;
   margin: 0 auto;
-  line-height: 39px;
+  line-height: 40px;
   border-width: thin;
   border-bottom: 1px solid #777;
   color: #eee;
-  font-weight: 600;
-  text-align: left;
-  padding-left: 20px;
+  font-weight: 900;
+  text-align: start;
+  padding-left: 10px;
 }
 
 today-weather ul li span {
@@ -251,8 +252,10 @@ today-weather ul li:last-child {
 /* Footer Styles */
 .footer-info {
   color: white;
-  margin-top: 30px;
-  padding-top: 20px;
+  font-weight: bolder;
+  margin-top: 10px;
+  padding-top: 10px;
+  margin-bottom: 50px;
 }
 
 .footer-info a {
@@ -263,31 +266,31 @@ today-weather ul li:last-child {
 
 @media screen and (max-width: 1920px) {
   .container {
-    width: 50%;
+    width: 70%;
   }
 }
 
 @media screen and (max-width: 1440px) {
   .container {
-    width: 55%;
+    width: 75%;
   }
 }
 
 @media screen and (max-width: 1280px) {
   .container {
-    width: 60%;
+    width: 80%;
   }
 }
 
 @media screen and (max-width: 1024px) {
   .container {
-    width: 75%;
+    width: 85%;
   }
 }
 
 @media screen and (max-width: 966px) {
   .container {
-    width: 90%;
+    width: 85%;
   }
 }
 
@@ -299,27 +302,46 @@ today-weather ul li:last-child {
   /*--agileits--*/
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 804px) {
   h1 {
     font-size: 35px;
   }
-  /* .temperature p {
-    font-size: 100px;
-  } */
   .temperature p {
     font-size: 30px; /* Decrease the font size at this screen width */
+    /* margin-bottom: -20px; */
   }
   .temperature span {
     font-size: 14px; /* Adjust the font size for the span at this screen width */
   }
   .dmy {
-    padding-top: 25px;
+    padding-top: 35px;
+  }
+  .date-time{
+    font-size: x-large;
   }
 }
 
 @media screen and (max-width: 736px) {
+  .container{
+    flex-wrap: wrap;
+    height: fit-content;
+    padding-bottom: 60px;
+    padding-top: 20px;
+  }
+  .city{
+    width: 100%;
+    min-height: 550px;
+  }
+  .forecast{
+    width: 100%;
+    height: fit-content;
+  }
+  .temperature{
+    position: absolute;
+    margin-bottom: -28px;
+  }
   .temperature p {
-    font-size: 30px;
+    font-size: 40px;
   }
   .dmy {
     padding-top: 10px;
@@ -338,8 +360,8 @@ today-weather ul li:last-child {
     margin-top: 30px;
   }
   .container {
-    width: 95%;
-    margin-top: 30px;
+    width: 90%;
+    margin-top: -80px;
   }
 }
 
@@ -373,30 +395,23 @@ today-weather ul li:last-child {
   }
   .city {
     width: 100%;
-    min-height: 300px;
+    /* min-height: 300px; */
   }
   .temperature {
     text-align: right;
   }
   .temperature p {
-    font-size: 20px;
+    font-size: 33px;
   }
   .dmy {
-    padding-top: 35px;
+    padding-top: 30px;
   }
   .forecast-icon {
-    margin: 10px 0;
+    margin: 20px 0;
   }
   .forecast {
     width: 100%;
-    padding-bottom: 30px;
-  }
-  .copyright {
     padding-bottom: 20px;
-  }
-  .copyright p {
-    line-height: 30px;
-    font-size: 14px;
   }
 }
 
@@ -405,116 +420,48 @@ today-weather ul li:last-child {
   h1 {
     font-size: 33px;
   }
+}
+
+@media screen and (max-width: 507px) {
+  h1 {
+    font-size: 23px;
+  }
+  .temperature{
+    margin-bottom: -45px;
+  }
+  .date-time{
+    font-size: x-large;
+  }
+}
+
+@media screen and (max-width: 417px) {
+  .container{
+    width: 95%;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  .temperature{
+    margin-bottom: -55px;
+  }
   .temperature p{
-    display: none;
+    font-size: 30px;
+  }
+  .date-time{
+    font-size: large;
   }
 }
 
-@media screen and (max-width: 480px) {
-  /*--w3layouts--*/
-  /*--agileits--*/
-  h1 {
-    font-size: 28px;
-    letter-spacing: 2px;
+
+
+
+
+@media screen and (max-width: 308px) {
+  .date-time{
+    font-size: medium;
   }
-  .container {
-    margin-bottom: 20px;
-  }
-  .forecast-icon {
-    margin: 40px 0 10px;
-  }
-  .forecast-icon img {
-    width: 100px;
-  }
-  .today-weather h3 {
-    font-size: 40px;
-  }
-  .city {
-    min-height: 450px;
-  }
-  .title h2 {
+  .temperature p{
     font-size: 25px;
-  }
-  .title h3 {
-    font-size: 14px;
-  }
-  .date-time {
-    width: 100%;
-    padding: 0;
-  }
-  .dmy {
-    padding: 0;
-    margin-bottom: 35px;
-    text-align: center;
-    width: 100%;
-  }
-  div#txt {
-    font-size: 30px;
-  }
-  .date {
-    font-size: 22px;
-  }
-  .temperature {
-    text-align: center;
-    width: 100%;
-  }
-  .copyright {
-    padding: 20px;
-  }
-  .temperature p {
-    font-size: 10px;
-    padding-bottom: 15px;
-  }
-  .forecast-icon img {
-    width: 65px;
-  }
-  .today-weather h3 {
-    font-size: 30px;
-  }
-  .copyright p {
-    line-height: 25px;
-    font-size: 13px;
-  }
-  .container {
-    height: 60vh;
-    margin-top: 60px;
-  }
-  .mb-icon {
-    top: 20% !important;
-    display: block !important;
-  }
-  .forecast-icon,
-  .today-weather h3 {
-    display: none;
-  }
-  .today-weather {
-    background-color: rgba(0, 0, 0, 0.73);
-    margin-top: 22px;
-    padding: 25px 0px;
-  }
-}
-
-
-
-
-@media screen and (max-width: 375px) {
-  h1 {
-    font-size: 26px;
-    line-height: 1.5em;
-    letter-spacing: 0;
-  }
-  .city {
-    min-height: 315px;
-  }
-  .dmy {
-    margin-bottom: 20px;
-  }
-  .date {
-    font-size: 18px;
-  }
-  .temperature p {
-    padding-bottom: 15px;
-    font-size: 10px;
   }
 }
 
