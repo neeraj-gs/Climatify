@@ -191,7 +191,7 @@ h1 {
 /* Temperature Styles */
 .temperature {
   position: absolute;
-  bottom: 85px;
+  bottom: 63px;
   /* right: 10px; Adjust the right position for the temperature */
   /* text-align: right; */
 }
@@ -294,6 +294,12 @@ today-weather ul li:last-child {
   }
 }
 
+@media screen and (max-width: 874px) {
+  .date-time{
+    font-size: x-large;
+  }
+}
+
 @media screen and (max-width: 853px) {
   h1 {
     font-size: 45px;
@@ -321,6 +327,15 @@ today-weather ul li:last-child {
   }
 }
 
+@media screen and (max-width: 766px) {
+  .date-time{
+    font-size: large;
+  }
+  .temperature{
+    margin-bottom: -15px;
+  }
+}
+
 @media screen and (max-width: 736px) {
   .container{
     flex-wrap: wrap;
@@ -338,7 +353,7 @@ today-weather ul li:last-child {
   }
   .temperature{
     position: absolute;
-    margin-bottom: -28px;
+    margin-bottom: -15px;
   }
   .temperature p {
     font-size: 40px;
@@ -427,7 +442,7 @@ today-weather ul li:last-child {
     font-size: 23px;
   }
   .temperature{
-    margin-bottom: -45px;
+    margin-bottom: -10px;
   }
   .date-time{
     font-size: x-large;
@@ -442,7 +457,7 @@ today-weather ul li:last-child {
     font-size: 20px;
   }
   .temperature{
-    margin-bottom: -55px;
+    margin-bottom: -15px;
   }
   .temperature p{
     font-size: 30px;
@@ -462,6 +477,12 @@ today-weather ul li:last-child {
   }
   .temperature p{
     font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 265px) {
+  .temperature{
+    margin-bottom: 0px;
   }
 }
 
