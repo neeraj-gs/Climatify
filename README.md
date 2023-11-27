@@ -18,19 +18,18 @@ The App Basically Has 2 Components:
 
 ### Screenshots
 
-The Weather App
+- The Weather App
 ![Weather APP](./climatify-typescript/src/images/full_app.png)
 
-
-
-The First Component that Prompts User to allow their Geolocation details.
-
+- The First Component that Prompts User to allow their Geolocation details.
 ![1st Page](./climatify-typescript/src/images/Location.png)
 
-The First Component giving details realted to user's location
+- The First Component gives details realted to the user's location.
+
 ![Compo1](./climatify-typescript/src/images/compo1.png)
 
-The Second Component giving weather infor worldwide
+- The Second Component gives weather information worldwide.
+  
 ![Compo2](./climatify-typescript/src/images/compo2.png)
 
 
