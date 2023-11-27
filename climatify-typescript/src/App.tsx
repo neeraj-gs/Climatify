@@ -11,7 +11,7 @@ function App() {
 
       {/* Footer Section  */}
       <div className="footer-info">
-      <a href="https://github.com/neeraj-gs/Weather-App" target="_blank" rel="noreferrer">
+      <a href="https://github.com/neeraj-gs/Weather-App" target="_blank" rel="noreferrer" style={{color:'lightblue'}}>
         Source Code
       </a>
       {" "}
