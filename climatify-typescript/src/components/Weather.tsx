@@ -87,7 +87,7 @@ class Weather extends React.Component {
               console.log(err);
               this.getWeather(28.67, 77.22); //used to fetch data from a api givenS
               alert(
-                "You have disabled location service. Your current location will be used for calculating Real time weather."
+                "You have disabled location service. Your current location will be used for calculating Real time weather. \n\n Do Allow your Location for Accessing the Weahter App.\n\n Close the Browser Tab and Open it Again or Allow your Location settings"
               );
             });
         } else {
