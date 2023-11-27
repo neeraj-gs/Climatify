@@ -20,6 +20,7 @@ const Forcast: React.FC<ForecastProps> = (props) => {
       .get(`${apiKeys.base}weather?q=${city}&units=metric&APPID=${apiKeys.key}`)
       .then((response) => {
         setWeather(response.data);
+        // console.log(response.data);
         setQuery("");
       })
       .catch(function (error) {
@@ -32,12 +33,12 @@ const Forcast: React.FC<ForecastProps> = (props) => {
 
   const defaults = {
     color: "white",
-    size: 112,
+    size: 120,
     animate: true,
   };
 
   useEffect(() => {
-    search("Bengaluru");
+    search("Bengaluru"); //shows the default weather results
   }, []);
 
   return (
@@ -50,6 +51,7 @@ const Forcast: React.FC<ForecastProps> = (props) => {
           animate={defaults.animate}
         />
       </div>
+
       <div className="today-weather">
         <h3>{props.weather}</h3>
         <div className="search-box">
@@ -81,27 +83,39 @@ const Forcast: React.FC<ForecastProps> = (props) => {
                 />
               </li>
               <li>
-                Temperature{" "}
+                Temperature:{" "}
                 <span className="temp">
-                  {Math.round(weather.main.temp)}°c ({weather.weather[0].main})
+                  {Math.round(weather.main.temp)}°c 
                 </span>
               </li>
               <li>
-                Humidity{" "}
+                Feels Like:{" "}
+                <span className="temp">
+                  {Math.round(weather.main.feels_like)}°c 
+                </span>
+              </li>
+              <li>
+                Humidity:{" "}
                 <span className="temp">
                   {Math.round(weather.main.humidity)}%
                 </span>
               </li>
               <li>
-                Visibility{" "}
+                Visibility:{" "}
                 <span className="temp">
                   {Math.round(weather.visibility)} mi
                 </span>
               </li>
               <li>
-                Wind Speed{" "}
+                Wind Speed:{" "}
                 <span className="temp">
                   {Math.round(weather.wind.speed)} Km/h
+                </span>
+              </li>
+              <li>
+                Description:{" "}
+                <span className="temp">
+                  {weather.weather[0].description}
                 </span>
               </li>
             </div>

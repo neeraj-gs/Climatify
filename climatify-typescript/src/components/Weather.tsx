@@ -78,7 +78,7 @@ class Weather extends React.Component {
             //If user allow location service then will fetch data & send it to get-weather function.
             .then((position) => {
                 //position is an object that gives some data and contains a latitude and longitude
-                console.log(position)
+                // console.log(position)
                 // @ts-expect-error coors is coming form external api key so
                 this.getWeather(position.coords.latitude, position.coords.longitude); //used to fetch data from a api givenS
             })
@@ -117,7 +117,7 @@ class Weather extends React.Component {
           `${apiKeys.base}weather?lat=${lat}&lon=${lon}&units=metric&APPID=${apiKeys.key}` //fetch data from the api
         );
         const data = await weather_data.json();
-        console.log(data);
+        // console.log(data);
         this.setState({ //updating the state we created eralier
           latitude: lat,
           longitude: lon,
@@ -166,12 +166,17 @@ class Weather extends React.Component {
     render() {
       if (this.state.temperatureC) { //rendered only if the data is fetched successfully
         return (
-          <React.Fragment>
+          <>
+            {/* 1st component that shows the curret weather details with a live clock  */}
             <div className="city">
+
+              {/* renders the city and country on the componeen  */}
               <div className="title">
                 <h2>{this.state.city}</h2>
                 <h3>{this.state.country}</h3>
               </div>
+
+              
               <div className="mb-icon">
                 {" "}
                 <ReactAnimatedWeather
@@ -183,6 +188,8 @@ class Weather extends React.Component {
                 <p>{this.state.main}</p>
                 {/* disaplys the main , based on switch case icon is rendered */}
               </div>
+
+              {/* Dispalyign date tiem and live clock  */}
               <div className="date-time">
                 <div className="dmy">
                   <div id="txt"></div>
@@ -199,9 +206,12 @@ class Weather extends React.Component {
                   {this.state.temperatureF} &deg;F */}
                 </div>
               </div>
+
             </div>
+
+                {/* 2nd Component that has the search feture integrated  */}
             <Forcast icon={this.state.icon} weather={this.state.main} />
-          </React.Fragment>
+          </>
         );
       } else { //if teh data is not fetched from the api
         return ( //this is the page being renderd , if the user is not yet allowd for geolocation
