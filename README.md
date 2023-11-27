@@ -40,6 +40,10 @@ The App Basically Has 2 Components:
 - Dynamic Icon change based on temperature.
 
 
+### Screenshots
+
+
+
 ### Installation for local setup
 
 
