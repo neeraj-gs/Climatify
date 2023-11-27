@@ -5,16 +5,19 @@ A Real Time Weather Forcast App, that allows users to check weahter conditions a
 
 The App Basically Has 2 Components:
     
-    1. Current Location Component that gives:
+  1. Current Location Component that gives:
         - A Live Clock Based on User's geolocation Time 
         - Date ,Day and Temperature based on User's geolocation.
         - Gives the Current Location of the User.
     
-    2. Forcast Component that gives: 
+  2. Forcast Component that gives: 
         - Diffrent weather condition details of a particular place.
         - A Search box that dynamically gets the weather details of a place.
         - Icons that change dynamically based on the temperature
 
+
+### Screenshots
+The First Component that Prompts User to allow their Geolocation details.
 
 
 
@@ -40,7 +43,7 @@ The App Basically Has 2 Components:
 - Dynamic Icon change based on temperature.
 
 
-### Screenshots
+
 
 
 
